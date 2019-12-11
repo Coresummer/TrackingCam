@@ -119,7 +119,7 @@ while video.isOpened():
 
             #move servo motor
             diffX = ((centerX - (x + w/2)) / videoW/2) * 80
-            diffY = ((centerY - (y + h/2)) / videoH/2) * 80
+            diffY = ((centerY - (y + h/2)) / videoH/2) * 50
 
             #if diffX > 0: new_angleX = Current_AngleX + 5
             #elif diffX < 0: new_angleX = Current_AngleX - 5
@@ -132,10 +132,10 @@ while video.isOpened():
             print(diffX)
             print(diffY)
 
-            if diffX > 0 and diffX < 1: diffX = 0
-            elif diffX < 0 and diffX > -1: diffX = 0
-            if diffY > 0 and diffY < 1: diffY = 0
-            elif diffY < 0 and diffY > -1: diffY = 0
+            if diffX > 0 and diffX < 0.5: diffX = 0
+            elif diffX < 0 and diffX > -0.5: diffX = 0
+            if diffY > 0 and diffY < 0.5: diffY = 0
+            elif diffY < 0 and diffY > -0.5: diffY = 0
 
             new_angleX = Current_AngleX + diffX
             new_angleY = Current_AngleY + diffY
